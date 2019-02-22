@@ -11,7 +11,8 @@ Document | Description
 
 ### GENERAL
 
-* The base endpoint for testnet is: `https://test.exscudo.com/api/v1/` for mainnet change the domain accordingly
+* The base endpoint for mainnet is: `https://my.exscudo.com/api/v1/` 
+* Endpoint for testnet is: `https://test.exscudo.com/api/v1/`
 * Port 443
 * All endpoints return a JSON object
 * For GET endpoints, parameters must be sent as a query string
