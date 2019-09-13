@@ -50,7 +50,7 @@ If successful returns:
 
 ```json
 {
-  "success": true,
+  "success": true
 }
 ```
 
@@ -191,12 +191,30 @@ Returns payload for the requested symbol:
     "low": 244.2,
     "high": 248.19,
     "volume": 7842.11542563,
+    "dailyPriceChange": 0,
+    "dailyVolume": 0,
+    "rolling24HoursVolume": 0.0023,
     "timestamp": 7898784551444
   }
 }
 ```
+##### Response body 
 
-**lastTrade** - timestamp in millis
+| Field           | Comment                                                      |
+| ------------------- | ------------------------------------------------------------ |
+| symbol              | Currency pair                                                |
+| bid                 | Bid                                                          |
+| ask                 | Ask                                                          |
+| openPrice           | Open price                                                   |
+| lastPrice           | Current price                                                |
+| low                 | The lowest price within session                              |
+| high                | The highest price within session                             |
+| volume              | Last trade's volume in lots                                  |
+| dailyPriceChange    | Price change % in current session                            |
+| dailyVolume         | Trade volume for symbol in current session                   |
+| rolling24HoursVolume| Trade volume for symbol in the last 24 hours since current date  |
+| timestamp           | Timestamp in millis                                          |
+
 
 #### Tickers
 
@@ -535,7 +553,7 @@ If success response payload will be as follows:
     "executedAmount": 0.00000,
     "totalAmount": 0.02000,
     "priceLimit": 1,
-    "comment": null,
+    "comment": null
   }
 }
 ```
