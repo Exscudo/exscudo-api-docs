@@ -439,13 +439,13 @@ To submit a new order send request:
 
 `POST /order`
 
-Optional query parameters:
+Query parameters:
 
-| Parameter (optional) | Type   | Comment                                                      |
+| Parameter            | Type   | Comment                                                      |
 | -------------------- | ------ | ------------------------------------------------------------ |
 | market               | String | Market code. If not passed then default XCCX market will be used |
-| terminalId           | String | an optional user-defined constant value used to determine request origin upon receiving a response |
-| clientOrderId        | Int    | an optional user-defined unique value used to determine request origin upon receiving a response, must be integer number |
+| terminalId           | String | an user-defined constant value used to determine request origin upon receiving a response |
+| clientOrderId        | Int    | an user-defined unique value used to determine request origin upon receiving a response, must be integer number |
 | type                 | String | supported values: OPEN_MARKET, OPEN_LIMIT, STOP_MARKET, STOP_LIMIT, ON_CLOSE |
 | operation            | String | supported values: BUY, SELL                                  |
 | orderPeriod          | String | supported values: `DAY` - Day , `GTC` - Good till canceled. If order period is not passed with request, the default value will be GTC |
