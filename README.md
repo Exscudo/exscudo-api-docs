@@ -57,11 +57,11 @@ curl -H 'X-EXC-APIKEY:123' -H 'X-EXC-TIME:1529591374427' -H ‘X-EXC-PASS: USER_PA
 
 To generate the X-EXC-SIGN header of an API signature the user must encode with Secret key by HmacSHA256:
 
-for GET requests - an URI and all query parameters for example = /api/v1/markets?apikey=qweqwe&timestamp=1234566789
+for GET requests - an URI except prefix /api/v1 and all query parameters for example = /markets?apikey=qweqwe&timestamp=1234566789
 
-for POST requests - an URI, query parameters and request body (if exists) exactly in the order as described in the following example::
+for POST requests - an URI except prefix /api/v1 and query parameters and request body (if exists) exactly in the order as described in the following example::
 
-/api/v1/order/?apikey=123&timestamp=1535451317896{"accountId":976109372000000,"operation":"BUY","symbol":"BTCEON","type":"OPEN_LIMIT","amount":10,"limitPrice":10,"stopPrice":1,"terminalId":"qweqwe","clientOrderId":132,"orderPeriod":"DAY"}
+/order/?apikey=123&timestamp=1535451317896{"accountId":976109372000000,"operation":"BUY","symbol":"BTCEON","type":"OPEN_LIMIT","amount":10,"limitPrice":10,"stopPrice":1,"terminalId":"qweqwe","clientOrderId":132,"orderPeriod":"DAY"}
 
 Encoding can be made with variety of on-line tools, for example https://www.freeformatter.com/hmac-generator.html.
 
